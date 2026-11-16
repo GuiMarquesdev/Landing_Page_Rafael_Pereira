@@ -1,0 +1,10 @@
+# Robots.txt for Rafael Pereira Nutricionista
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://ais-dev-vs4hs2qbk4dct5zjmadt5s-35758496924.us-west1.run.app/sitemap.xml
+
+# LLM Context Reference
+# Documentation and structured context for AI crawlers:
+# https://ais-dev-vs4hs2qbk4dct5zjmadt5s-35758496924.us-west1.run.app/llms.txt

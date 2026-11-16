@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --font-oswald: 'Oswald', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-bebas: 'Bebas Neue', 'Oswald', sans-serif;
+  --font-anton: 'Anton', 'Oswald', sans-serif;
+  --font-handwriting: 'Caveat', cursive;
+  --font-signature: 'Homemade Apple', cursive;
+
+  --color-sand: #F3EEE6;
+  --color-sand-card: #EBE5DB;
+  --color-sage: #395D89;
+  --color-sage-dark: #2D4B70;
+  --color-sage-light: #709CC2;
+  --color-terracotta: #1E3A5F;
+  --color-terracotta-hover: #152944;
+  --color-charcoal: #2B2F2A;
+}
+
+body {
+  font-family: var(--font-oswald);
+  background-color: #F3EEE6;
+  color: #2B2F2A;
+}
+
+.font-bebas {
+  font-family: var(--font-bebas);
+}
+
+.font-anton {
+  font-family: var(--font-anton);
+}
+
+.font-oswald {
+  font-family: var(--font-oswald);
+}
+
+.font-script {
+  font-family: var(--font-handwriting);
+}
+
+.font-signature {
+  font-family: var(--font-signature);
+}
+
+/* Custom smooth transitions */
+.btn-terracotta {
+  background-color: #1E3A5F;
+  color: #ffffff;
+  transition: all 0.25s ease;
+}
+.btn-terracotta:hover {
+  background-color: #152944;
+  transform: translateY(-1px);
+}
+
+.btn-sage {
+  background-color: #395D89;
+  color: #ffffff;
+  transition: all 0.25s ease;
+}
+.btn-sage:hover {
+  background-color: #2D4B70;
+  transform: translateY(-1px);
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-150%) skewX(-12deg);
+  }
+  30%, 100% {
+    transform: translateX(250%) skewX(-12deg);
+  }
+}

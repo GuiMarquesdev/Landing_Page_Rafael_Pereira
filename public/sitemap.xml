@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://ais-dev-vs4hs2qbk4dct5zjmadt5s-35758496924.us-west1.run.app/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ais-dev-vs4hs2qbk4dct5zjmadt5s-35758496924.us-west1.run.app/og-image.jpg</image:loc>
+      <image:title>Rafael Pereira • Nutricionista Clínico e Esportivo</image:title>
+      <image:caption>Nutrição personalizada para sua rotina real: emagrecimento saudável, hipertrofia e saúde metabólica</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ais-dev-vs4hs2qbk4dct5zjmadt5s-35758496924.us-west1.run.app/assets/hero-rafael.webp</image:loc>
+      <image:title>Rafael Pereira Nutricionista em atividade esportiva ao ar livre</image:title>
+      <image:caption>Nutrição esportiva e estilo de vida saudável na prática</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ais-dev-vs4hs2qbk4dct5zjmadt5s-35758496924.us-west1.run.app/assets/about-rafael.webp</image:loc>
+      <image:title>Rafael Pereira durante apresentação acadêmica de Nutrição</image:title>
+      <image:caption>Base científica e atendimento humanizado em Nutrição Clínica e Esportiva</image:caption>
+    </image:image>
+  </url>
+</urlset>
