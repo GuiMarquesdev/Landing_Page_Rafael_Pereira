@@ -9,7 +9,7 @@ import {
   Check,
   MessageCircle,
 } from 'lucide-react';
-import { NUTRITIONIST_CONTACT, buildWhatsAppUrl } from '../contact';
+import { NUTRITIONIST_CONTACT, buildWhatsAppUrl, openWhatsAppWithMessage } from '../contact';
 
 type ActiveTab = 'pre-atendimento' | 'acompanhamento';
 
@@ -219,6 +219,7 @@ export const QuestionnairesSection: React.FC = () => {
       setErrorMsg('Preencha seu nome completo e WhatsApp na Etapa 1 antes de enviar.');
       return;
     }
+    openWhatsAppWithMessage(formatPreSummary());
     setPreSubmitted(true);
   };
 
@@ -229,6 +230,7 @@ export const QuestionnairesSection: React.FC = () => {
       setErrorMsg('Informe seu nome e selecione como foi sua semana em relação ao planejamento.');
       return;
     }
+    openWhatsAppWithMessage(formatWeeklySummary());
     setWeeklySubmitted(true);
   };
 
@@ -398,7 +400,7 @@ export const QuestionnairesSection: React.FC = () => {
                     PRÉ-ATENDIMENTO REGISTRADO!
                   </h3>
                   <p className="text-xs sm:text-sm text-[#2B2F2A]/80 max-w-md mx-auto leading-relaxed">
-                    Obrigado, <strong className="text-[#2B2F2A]">{preData.nomeCompleto}</strong>! Suas respostas foram organizadas. Envie diretamente para o WhatsApp do nutricionista ({NUTRITIONIST_CONTACT.whatsappDisplay}) ou copie o resumo abaixo.
+                    Obrigado, <strong className="text-[#2B2F2A]">{preData.nomeCompleto}</strong>! Abrimos o WhatsApp do nutricionista ({NUTRITIONIST_CONTACT.whatsappDisplay}) com todas as suas respostas preenchidas. Caso não tenha aberto automaticamente, clique abaixo.
                   </p>
 
                   <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
@@ -1102,8 +1104,8 @@ export const QuestionnairesSection: React.FC = () => {
                         type="submit"
                         className="font-oswald inline-flex items-center gap-2 px-8 py-3 rounded-full text-xs font-bold uppercase tracking-[0.14em] bg-[#1E3A5F] hover:bg-[#152944] text-white shadow-sm transition-colors cursor-pointer"
                       >
-                        <span>Concluir Pré-Atendimento</span>
-                        <CheckCircle2 size={16} />
+                        <span>Concluir e Enviar no WhatsApp</span>
+                        <MessageCircle size={16} />
                       </button>
                     )}
                   </div>
@@ -1124,7 +1126,7 @@ export const QuestionnairesSection: React.FC = () => {
                     CHECK-IN SEMANAL REGISTRADO!
                   </h3>
                   <p className="text-xs sm:text-sm text-[#2B2F2A]/80 max-w-md mx-auto leading-relaxed">
-                    Obrigado pelo feedback, <strong className="text-[#2B2F2A]">{weeklyData.nomePaciente}</strong>! Envie seu check-in diretamente para o WhatsApp ({NUTRITIONIST_CONTACT.whatsappDisplay}) ou copie o resumo abaixo.
+                    Obrigado pelo feedback, <strong className="text-[#2B2F2A]">{weeklyData.nomePaciente}</strong>! Abrimos o WhatsApp do nutricionista ({NUTRITIONIST_CONTACT.whatsappDisplay}) com seu check-in preenchido. Caso não tenha aberto automaticamente, clique abaixo.
                   </p>
                   <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
                     <a
@@ -1247,8 +1249,8 @@ export const QuestionnairesSection: React.FC = () => {
                       type="submit"
                       className="font-oswald w-full sm:w-auto px-8 py-3.5 rounded-full text-xs font-bold tracking-[0.14em] bg-[#1E3A5F] hover:bg-[#152944] text-white uppercase inline-flex items-center justify-center gap-2 shadow-sm transition-colors cursor-pointer"
                     >
-                      <span>Enviar Check-in Semanal</span>
-                      <CheckCircle2 size={16} />
+                      <span>Enviar Check-in no WhatsApp</span>
+                      <MessageCircle size={16} />
                     </button>
                   </div>
                 </form>

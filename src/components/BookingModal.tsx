@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, CheckCircle2, ArrowRight, MessageCircle } from 'lucide-react';
 import { ShimmerButton } from './ui/ShimmerButton';
-import { NUTRITIONIST_CONTACT, buildWhatsAppUrl } from '../contact';
+import { NUTRITIONIST_CONTACT, buildWhatsAppUrl, openWhatsAppWithMessage } from '../contact';
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -53,6 +53,11 @@ export const BookingModal: React.FC<BookingModalProps> = ({
     };
   }, [isOpen]);
 
+  const buildModalMessage = () =>
+    `Olá Rafael Pereira! Gostaria de agendar uma consulta.\n• Nome: ${name}\n• Modalidade: ${selectedProgram}\n• E-mail: ${email}${
+      phone ? `\n• WhatsApp: ${phone}` : ''
+    }${details ? `\n• Objetivo: ${details}` : ''}`;
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage('');
@@ -66,6 +71,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
       return;
     }
 
+    openWhatsAppWithMessage(buildModalMessage());
     setSubmitted(true);
   };
 
@@ -128,11 +134,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   </p>
                   <div className="pt-3 flex flex-wrap items-center justify-center gap-3">
                     <a
-                      href={buildWhatsAppUrl(
-                        `Olá Rafael Pereira! Gostaria de agendar uma consulta.\n• Nome: ${name}\n• Modalidade: ${selectedProgram}\n• E-mail: ${email}${
-                          phone ? `\n• WhatsApp: ${phone}` : ''
-                        }${details ? `\n• Objetivo: ${details}` : ''}`
-                      )}
+                      href={buildWhatsAppUrl(buildModalMessage())}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-oswald inline-flex items-center gap-2 px-7 py-3 rounded-full text-xs font-bold tracking-wider uppercase bg-[#1E3A5F] hover:bg-[#152944] text-white shadow-sm transition-all"

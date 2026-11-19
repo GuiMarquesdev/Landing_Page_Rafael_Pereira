@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2, MessageCircle } from 'lucide-react';
-import { NUTRITIONIST_CONTACT, buildWhatsAppUrl } from '../contact';
+import { NUTRITIONIST_CONTACT, buildWhatsAppUrl, openWhatsAppWithMessage } from '../contact';
 
 interface CtaProps {
   initialProgram?: string;
@@ -24,6 +24,11 @@ export const CtaSection: React.FC<CtaProps> = ({ initialProgram }) => {
     }
   }, [initialProgram]);
 
+  const buildBookingMessage = () =>
+    `Olá Rafael Pereira! Gostaria de agendar minha avaliação.\n• Nome: ${name}\n• Modalidade: ${selectedProgram}\n• E-mail: ${email}${
+      phone ? `\n• WhatsApp: ${phone}` : ''
+    }${details ? `\n• Objetivo: ${details}` : ''}`;
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage('');
@@ -38,6 +43,7 @@ export const CtaSection: React.FC<CtaProps> = ({ initialProgram }) => {
       return;
     }
 
+    openWhatsAppWithMessage(buildBookingMessage());
     setSubmitted(true);
   };
 
@@ -95,11 +101,7 @@ export const CtaSection: React.FC<CtaProps> = ({ initialProgram }) => {
               </p>
               <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
                 <a
-                  href={buildWhatsAppUrl(
-                    `Olá Rafael Pereira! Gostaria de agendar minha avaliação.\n• Nome: ${name}\n• Modalidade: ${selectedProgram}\n• E-mail: ${email}${
-                      phone ? `\n• WhatsApp: ${phone}` : ''
-                    }${details ? `\n• Objetivo: ${details}` : ''}`
-                  )}
+                  href={buildWhatsAppUrl(buildBookingMessage())}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-oswald inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase bg-[#1E3A5F] hover:bg-[#152944] text-white transition-colors shadow-xs"
