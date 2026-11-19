@@ -9,18 +9,6 @@ interface ServicesProps {
 export const Services: React.FC<ServicesProps> = ({ onSelectProgram }) => {
   const services = [
     {
-      id: 'consulta-presencial',
-      name: 'CONSULTA PRESENCIAL & BIOIMPEDÂNCIA',
-      description: 'Avaliação física minuciosa com bioimpedância tetrapolar, rastreamento metabólico e plano alimentar entregue na hora.',
-      icon: Utensils,
-      badge: 'Atendimento em Consultório',
-      highlights: [
-        'Bioimpedância tetrapolar de precisão',
-        'Cardápio calculado para sua rotina real',
-        'Avaliação de exames laboratoriais detalhada',
-      ],
-    },
-    {
       id: 'online-coaching',
       name: 'ACOMPANHAMENTO ONLINE PREMIUM',
       description: 'Consultas por vídeo de onde você estiver, suporte contínuo no WhatsApp e ajustes semanais com foco em consistência.',
@@ -33,15 +21,28 @@ export const Services: React.FC<ServicesProps> = ({ onSelectProgram }) => {
       ],
     },
     {
-      id: 'the-reset',
-      name: 'PROTOCOLO RESET — 6 SEMANAS',
-      description: 'Um programa intensivo e guiado passo a passo para destravar o metabolismo, desinflamar e resgatar sua energia vital.',
-      icon: Activity,
-      badge: 'Acelerador de Resultados',
+      id: 'consulta-avulsa',
+      name: 'CONSULTA AVULSA',
+      description: 'Indicado para quem deseja uma avaliação nutricional completa e orientações personalizadas em um encontro único.',
+      icon: Utensils,
+      badge: 'Encontro Único',
       highlights: [
-        'Cardápio anti-inflamatório estruturado',
-        'Guia de suplementação personalizada',
-        'Rastreador de metas e hábitos diários',
+        'Avaliação nutricional completa',
+        'Planejamento alimentar individualizado',
+        'Orientações nutricionais personalizadas',
+      ],
+    },
+    {
+      id: 'plano-trimestral',
+      name: 'PLANO TRIMESTRAL',
+      description: 'Indicado para quem busca acompanhamento inicial com ajustes e monitoramento da evolução.',
+      icon: Activity,
+      badge: 'Pacote de Acompanhamento',
+      highlights: [
+        '1 consulta inicial completa',
+        '2 consultas de retorno',
+        'Ajustes no plano alimentar conforme evolução',
+        'Suporte para dúvidas ao longo do acompanhamento',
       ],
     },
   ];

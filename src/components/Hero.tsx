@@ -20,7 +20,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartPlanClick }) => {
             <div className="inline-flex items-center space-x-2">
               <span className="w-1.5 h-1.5 rounded-full bg-white/70" />
               <p className="text-[11px] sm:text-[12px] font-bold tracking-[0.22em] text-white/90 uppercase">
-                NUTRICIONISTA CLÍNICO &amp; ESPORTIVO • CRN ATIVO
+                NUTRICIONISTA CLÍNICO • CRN ATIVO
               </p>
             </div>
 
@@ -53,7 +53,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartPlanClick }) => {
         <div className="lg:col-span-6 relative min-h-[380px] lg:min-h-full bg-[#EBE5DB] overflow-hidden">
           <img
             src={IMAGES.hero}
-            alt="Rafael Pereira nutricionista clínico e esportivo praticando corrida ao ar livre"
+            alt="Rafael Pereira nutricionista clínico praticando corrida ao ar livre"
             width={800}
             height={800}
             loading="eager"

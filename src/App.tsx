@@ -11,7 +11,7 @@ import { QuestionnairesSection } from './components/QuestionnairesSection';
 
 export default function App() {
   const [selectedProgram, setSelectedProgram] = useState<string>(
-    'CONSULTA PRESENCIAL & BIOIMPEDÂNCIA'
+    'ACOMPANHAMENTO ONLINE PREMIUM'
   );
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 

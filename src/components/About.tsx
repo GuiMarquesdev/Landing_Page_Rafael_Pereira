@@ -1,6 +1,5 @@
 import React from 'react';
 import { IMAGES } from '../images';
-import { Quote } from 'lucide-react';
 
 export const About: React.FC = () => {
   return (
@@ -50,10 +49,10 @@ export const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Parte 2: Centro - Texto de Apresentação e Assinatura */}
-          <div className="lg:col-span-5 flex flex-col justify-center space-y-4 lg:border-r lg:border-[#D7CFBF] lg:pr-8">
+          {/* Parte 2: Direita - Texto de Apresentação e Assinatura */}
+          <div className="lg:col-span-8 flex flex-col justify-center space-y-4 lg:pl-2">
             <span className="font-oswald text-[11px] font-bold tracking-[0.2em] text-[#395D89] uppercase">
-              NUTRICIONISTA CLÍNICO &amp; ESPORTIVO • CRN ATIVO
+              NUTRICIONISTA CLÍNICO • CRN ATIVO
             </span>
             <p className="text-xs sm:text-sm text-[#2B2F2A] leading-relaxed font-normal">
               Sou nutricionista apaixonado por ajudar pessoas a construírem saúde duradoura, autoestima e energia — sem terrorismo nutricional e sem culpa. Minha abordagem é baseada na ciência e na vida real: nada de extremos, nada de dietas punitivas ou cardápios impossíveis de manter.
@@ -71,32 +70,10 @@ export const About: React.FC = () => {
                 Rafael Pereira
               </p>
               <p className="font-oswald text-[10px] text-[#395D89] font-semibold tracking-wider uppercase mt-1">
-                Nutricionista Clínico &amp; Esportivo
+                Nutricionista Clínico
               </p>
             </div>
           </div>
-
-          {/* Parte 3: Direita - Depoimento com aspas grandes em verde */}
-          <div className="lg:col-span-3 flex flex-col justify-center bg-[#F3EEE6]/60 rounded-2xl p-6 sm:p-7 border border-[#DFD8CD]">
-            <Quote size={40} className="text-[#395D89] mb-3 opacity-90" aria-hidden="true" />
-            <blockquote className="text-sm sm:text-base font-semibold text-[#2B2F2A] italic leading-relaxed mb-4">
-              “Perdi 9 kg sem deixar de comer o que gosto e minha disposição triplicou. Pela primeira vez aprendi a comer com prazer.”
-            </blockquote>
-            <div className="flex items-center space-x-3 pt-2 border-t border-[#DCD3C4]">
-              <div className="w-8 h-8 rounded-full bg-[#395D89] text-white flex items-center justify-center font-bold text-xs" aria-hidden="true">
-                CF
-              </div>
-              <div>
-                <p className="font-oswald text-xs font-bold text-[#2B2F2A] tracking-wide">
-                  Dra. Camila F.
-                </p>
-                <p className="font-oswald text-[10px] text-[#2B2F2A]/70 uppercase tracking-wider">
-                  Paciente Online • 8 Meses
-                </p>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>

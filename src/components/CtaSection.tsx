@@ -12,7 +12,7 @@ export const CtaSection: React.FC<CtaProps> = ({ initialProgram }) => {
   const [phone, setPhone] = useState('');
   const [details, setDetails] = useState('');
   const [selectedProgram, setSelectedProgram] = useState(
-    initialProgram || 'CONSULTA PRESENCIAL & BIOIMPEDÂNCIA'
+    initialProgram || 'ACOMPANHAMENTO ONLINE PREMIUM'
   );
   const [submitted, setSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
@@ -141,9 +141,9 @@ export const CtaSection: React.FC<CtaProps> = ({ initialProgram }) => {
                   onChange={(e) => setSelectedProgram(e.target.value)}
                   className="w-full px-3.5 py-2.5 rounded-xl border border-[#DFD8CC] text-xs sm:text-sm bg-[#FAF8F5] focus:outline-none focus:ring-2 focus:ring-[#395D89] transition-all font-oswald"
                 >
-                  <option value="CONSULTA PRESENCIAL & BIOIMPEDÂNCIA">Consulta Presencial &amp; Bioimpedância</option>
                   <option value="ACOMPANHAMENTO ONLINE PREMIUM">Acompanhamento Online Premium</option>
-                  <option value="PROTOCOLO RESET — 6 SEMANAS">Protocolo Reset — 6 Semanas</option>
+                  <option value="CONSULTA AVULSA">Consulta Avulsa</option>
+                  <option value="PLANO TRIMESTRAL">Plano Trimestral</option>
                   <option value="Ainda não sei / Quero orientação">Ainda não sei / Quero orientação</option>
                 </select>
               </div>

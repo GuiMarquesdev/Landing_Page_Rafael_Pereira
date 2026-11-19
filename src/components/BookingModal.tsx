@@ -13,7 +13,7 @@ interface BookingModalProps {
 export const BookingModal: React.FC<BookingModalProps> = ({
   isOpen,
   onClose,
-  initialProgram = 'CONSULTA PRESENCIAL & BIOIMPEDÂNCIA',
+  initialProgram = 'ACOMPANHAMENTO ONLINE PREMIUM',
 }) => {
   const [selectedProgram, setSelectedProgram] = useState(initialProgram);
   const [name, setName] = useState('');
@@ -70,9 +70,9 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   };
 
   const programs = [
-    { id: 'CONSULTA PRESENCIAL & BIOIMPEDÂNCIA', label: 'Presencial' },
-    { id: 'ACOMPANHAMENTO ONLINE PREMIUM', label: 'Online' },
-    { id: 'PROTOCOLO RESET — 6 SEMANAS', label: 'Reset 6 Semanas' },
+    { id: 'ACOMPANHAMENTO ONLINE PREMIUM', label: 'Online Premium' },
+    { id: 'CONSULTA AVULSA', label: 'Consulta Avulsa' },
+    { id: 'PLANO TRIMESTRAL', label: 'Plano Trimestral' },
   ];
 
   return (

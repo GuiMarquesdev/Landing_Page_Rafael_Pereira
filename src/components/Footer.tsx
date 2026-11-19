@@ -57,7 +57,7 @@ export const Footer: React.FC<FooterProps> = ({ onApplyClick }) => {
               RAFAEL PEREIRA
             </a>
             <p className="font-oswald text-[11px] text-[#2B2F2A]/60 uppercase tracking-widest mt-0.5">
-              NUTRIÇÃO CLÍNICA &amp; ESPORTIVA • CRN ATIVO
+              NUTRIÇÃO CLÍNICA • CRN ATIVO
             </p>
             <a
               href={buildWhatsAppUrl('Olá Rafael! Vim pelo site e gostaria de mais informações.')}

@@ -9,7 +9,7 @@ export const Faq: React.FC = () => {
     {
       id: 'faq-1',
       q: 'Qual modalidade de consulta é a ideal para mim?',
-      a: 'Se você mora próximo e deseja o exame detalhado de bioimpedância tetrapolar, a consulta presencial em consultório é fantástica. Se busca flexibilidade de horário ou mora em outra cidade/país, o Acompanhamento Online entrega exatamente a mesma eficácia clínica e suporte contínuo via WhatsApp.',
+      a: 'Todo o atendimento é 100% online, com a mesma precisão clínica. Se você deseja uma avaliação completa e orientações em um encontro único, a Consulta Avulsa é ideal. Para acompanhamento inicial com 2 retornos e ajustes contínuos, escolha o Plano Trimestral ou o Acompanhamento Online Premium com suporte semanal no WhatsApp.',
     },
     {
       id: 'faq-2',
