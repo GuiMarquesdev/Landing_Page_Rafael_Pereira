@@ -10,6 +10,7 @@ import {
   MessageCircle,
 } from 'lucide-react';
 import { NUTRITIONIST_CONTACT, buildWhatsAppUrl, openWhatsAppWithMessage } from '../contact';
+import { BirthDatePicker } from './ui/BirthDatePicker';
 
 type ActiveTab = 'pre-atendimento' | 'acompanhamento';
 
@@ -513,11 +514,15 @@ export const QuestionnairesSection: React.FC = () => {
                           <label htmlFor="pre-nasc" className={labelClass}>
                             Data de nascimento
                           </label>
-                          <input
+                          <BirthDatePicker
                             id="pre-nasc"
-                            type="date"
                             value={preData.dataNascimento}
-                            onChange={(e) => setPreData({ ...preData, dataNascimento: e.target.value })}
+                            onChange={(formatted) =>
+                              setPreData((prev) => ({ ...prev, dataNascimento: formatted }))
+                            }
+                            onAgeCalculated={(age) =>
+                              setPreData((prev) => ({ ...prev, idade: age }))
+                            }
                             className={inputClass}
                           />
                         </div>
