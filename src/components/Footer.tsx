@@ -59,14 +59,6 @@ export const Footer: React.FC<FooterProps> = ({ onApplyClick }) => {
             <p className="font-oswald text-[11px] text-[#2B2F2A]/60 uppercase tracking-widest mt-0.5">
               NUTRIÇÃO CLÍNICA • CRN ATIVO
             </p>
-            <a
-              href={buildWhatsAppUrl('Olá Rafael! Vim pelo site e gostaria de mais informações.')}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-xs text-[#395D89] hover:text-[#1E3A5F] font-semibold mt-0.5 transition-colors"
-            >
-              Falar pelo WhatsApp
-            </a>
           </div>
         </div>
 
