@@ -9,7 +9,7 @@ import {
   Check,
   MessageCircle,
 } from 'lucide-react';
-import { NUTRITIONIST_CONTACT, buildWhatsAppUrl, openWhatsAppWithMessage } from '../contact';
+import { buildWhatsAppUrl, openWhatsAppWithMessage } from '../contact';
 import { BirthDatePicker } from './ui/BirthDatePicker';
 
 type ActiveTab = 'pre-atendimento' | 'acompanhamento';
@@ -401,7 +401,7 @@ export const QuestionnairesSection: React.FC = () => {
                     PRÉ-ATENDIMENTO REGISTRADO!
                   </h3>
                   <p className="text-xs sm:text-sm text-[#2B2F2A]/80 max-w-md mx-auto leading-relaxed">
-                    Obrigado, <strong className="text-[#2B2F2A]">{preData.nomeCompleto}</strong>! Abrimos o WhatsApp do nutricionista ({NUTRITIONIST_CONTACT.whatsappDisplay}) com todas as suas respostas preenchidas. Caso não tenha aberto automaticamente, clique abaixo.
+                    Obrigado, <strong className="text-[#2B2F2A]">{preData.nomeCompleto}</strong>! Abrimos o WhatsApp do nutricionista com todas as suas respostas preenchidas. Caso não tenha aberto automaticamente, clique abaixo.
                   </p>
 
                   <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
@@ -1131,7 +1131,7 @@ export const QuestionnairesSection: React.FC = () => {
                     CHECK-IN SEMANAL REGISTRADO!
                   </h3>
                   <p className="text-xs sm:text-sm text-[#2B2F2A]/80 max-w-md mx-auto leading-relaxed">
-                    Obrigado pelo feedback, <strong className="text-[#2B2F2A]">{weeklyData.nomePaciente}</strong>! Abrimos o WhatsApp do nutricionista ({NUTRITIONIST_CONTACT.whatsappDisplay}) com seu check-in preenchido. Caso não tenha aberto automaticamente, clique abaixo.
+                    Obrigado pelo feedback, <strong className="text-[#2B2F2A]">{weeklyData.nomePaciente}</strong>! Abrimos o WhatsApp do nutricionista com seu check-in preenchido. Caso não tenha aberto automaticamente, clique abaixo.
                   </p>
                   <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
                     <a

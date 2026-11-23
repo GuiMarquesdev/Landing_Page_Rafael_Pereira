@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2, MessageCircle } from 'lucide-react';
-import { NUTRITIONIST_CONTACT, buildWhatsAppUrl, openWhatsAppWithMessage } from '../contact';
+import { buildWhatsAppUrl, openWhatsAppWithMessage } from '../contact';
 
 interface CtaProps {
   initialProgram?: string;
@@ -82,7 +82,7 @@ export const CtaSection: React.FC<CtaProps> = ({ initialProgram }) => {
               className="inline-flex items-center space-x-2 text-white hover:text-white/85 underline underline-offset-4 w-fit"
             >
               <MessageCircle size={16} className="shrink-0" />
-              <span>WhatsApp direto: {NUTRITIONIST_CONTACT.whatsappDisplay}</span>
+              <span>Atendimento direto pelo WhatsApp</span>
             </a>
           </div>
         </div>
@@ -97,7 +97,7 @@ export const CtaSection: React.FC<CtaProps> = ({ initialProgram }) => {
               </h3>
               <p className="text-xs sm:text-sm text-[#2B2F2A]/80 max-w-sm mx-auto leading-relaxed">
                 Obrigado, <strong className="font-bold text-[#2B2F2A]">{name}</strong>! Recebemos sua solicitação para{' '}
-                <span className="font-semibold text-[#395D89]">{selectedProgram}</span>. Se desejar atendimento imediato, envie sua solicitação agora pelo WhatsApp ({NUTRITIONIST_CONTACT.whatsappDisplay}).
+                <span className="font-semibold text-[#395D89]">{selectedProgram}</span>. Se desejar atendimento imediato, clique no botão abaixo para falar pelo WhatsApp.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
                 <a

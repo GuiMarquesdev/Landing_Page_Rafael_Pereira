@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { ShimmerButton } from './ui/ShimmerButton';
 import { IMAGES } from '../images';
 
 interface HeaderProps {
@@ -63,15 +62,6 @@ export const Header: React.FC<HeaderProps> = ({ onApplyClick }) => {
               </a>
             ))}
           </nav>
-
-          {/* Apply Now Shimmer Button (Magic UI / 21st.dev) */}
-          <ShimmerButton
-            onClick={onApplyClick}
-            variant="terracotta"
-            className="px-6 py-2.5 text-[12px]"
-          >
-            AGENDAR CONSULTA
-          </ShimmerButton>
         </div>
 
         {/* Mobile Hamburger Button */}

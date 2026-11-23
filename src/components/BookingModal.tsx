@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, CheckCircle2, ArrowRight, MessageCircle } from 'lucide-react';
 import { ShimmerButton } from './ui/ShimmerButton';
-import { NUTRITIONIST_CONTACT, buildWhatsAppUrl, openWhatsAppWithMessage } from '../contact';
+import { buildWhatsAppUrl, openWhatsAppWithMessage } from '../contact';
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -130,7 +130,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   </h3>
                   <p className="text-xs sm:text-sm text-[#2B2F2A]/80 max-w-sm mx-auto leading-relaxed">
                     Obrigado, <strong className="font-bold text-[#2B2F2A]">{name}</strong>! Recebemos sua solicitação para{' '}
-                    <span className="font-semibold text-[#395D89]">{selectedProgram}</span>. Se quiser agilizar seu agendamento, envie os dados direto no WhatsApp ({NUTRITIONIST_CONTACT.whatsappDisplay}).
+                    <span className="font-semibold text-[#395D89]">{selectedProgram}</span>. Se quiser agilizar seu agendamento, clique abaixo para enviar os dados direto no WhatsApp.
                   </p>
                   <div className="pt-3 flex flex-wrap items-center justify-center gap-3">
                     <a

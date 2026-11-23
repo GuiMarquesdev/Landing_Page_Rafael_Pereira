@@ -65,7 +65,7 @@ export const Footer: React.FC<FooterProps> = ({ onApplyClick }) => {
               rel="noopener noreferrer"
               className="inline-block text-xs text-[#395D89] hover:text-[#1E3A5F] font-semibold mt-0.5 transition-colors"
             >
-              WhatsApp: {NUTRITIONIST_CONTACT.whatsappDisplay}
+              Falar pelo WhatsApp
             </a>
           </div>
         </div>
@@ -73,7 +73,7 @@ export const Footer: React.FC<FooterProps> = ({ onApplyClick }) => {
         {/* Centro: Ícones Circulares de Contato */}
         <div className="flex items-center space-x-3">
           <a
-            href="https://instagram.com"
+            href={NUTRITIONIST_CONTACT.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram de Rafael Pereira Nutricionista"
@@ -116,19 +116,17 @@ export const Footer: React.FC<FooterProps> = ({ onApplyClick }) => {
               Agendar
             </a>
           </div>
-          <p className="text-xs text-[#2B2F2A]/75 font-medium">
+          <p className="sr-only">
             © 2026 Rafael Pereira Nutricionista. Todos os direitos reservados.
           </p>
-          <div className="flex items-center justify-center md:justify-end space-x-3 text-[11px] text-[#2B2F2A]/60">
-            <a href="/sitemap.xml" className="hover:text-[#1E3A5F] underline transition-colors">
+          <div className="sr-only">
+            <a href="/sitemap.xml">
               Sitemap.xml
             </a>
-            <span>•</span>
-            <a href="/robots.txt" className="hover:text-[#1E3A5F] underline transition-colors">
+            <a href="/robots.txt">
               Robots.txt
             </a>
-            <span>•</span>
-            <a href="/llms.txt" className="hover:text-[#1E3A5F] underline transition-colors">
+            <a href="/llms.txt">
               LLMs.txt
             </a>
           </div>

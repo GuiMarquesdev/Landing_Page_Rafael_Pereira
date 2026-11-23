@@ -19,7 +19,7 @@ export const Faq: React.FC = () => {
     {
       id: 'faq-3',
       q: 'Como funciona o suporte entre as consultas?',
-      a: 'Você terá acesso ao aplicativo exclusivo com seu plano alimentar, lista de compras e receitas, além de canal direto comigo pelo WhatsApp para tirar dúvidas rápidas sobre compras no supermercado ou escolhas em restaurantes.',
+      a: 'Você terá documentos exclusivos com seu plano alimentar, lista de compras e receitas, além de canal direto comigo pelo WhatsApp para tirar dúvidas rápidas sobre compras no supermercado ou escolhas em restaurantes.',
     },
     {
       id: 'faq-4',

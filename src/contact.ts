@@ -2,6 +2,7 @@ export const NUTRITIONIST_CONTACT = {
   whatsappDigits: '557196663579',
   whatsappDisplay: '+55 71 9666-3579',
   schemaTelephone: '+55-71-9666-3579',
+  instagramUrl: 'https://www.instagram.com/rafaelpsnutri?fqnt=azVjN3FoeHl1Mm05',
 };
 
 export function buildWhatsAppUrl(message: string): string {
